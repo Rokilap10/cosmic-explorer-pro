@@ -1183,3 +1183,269 @@
   color: var(--text-secondary);
   min-height: 100px;
 }
+
+/* Стили для страницы регистрации */
+.signupPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0a2a 0%, #1a1a3a 50%, #2d1b69 100%);
+  padding: 2rem;
+}
+
+.signupContainer {
+  z-index: 10;
+  width: 100%;
+  max-width: 500px;
+}
+
+.signupCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.signupHeader {
+  margin-bottom: 2.5rem;
+}
+
+.signupHeader .logo {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.signupHeader .title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #8ab4f8 0%, #6b93d6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.signupHeader .subtitle {
+  font-size: 1.2rem;
+  color: #b0b0ff;
+  line-height: 1.5;
+}
+
+/* Форма */
+.signupForm {
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.8rem;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  color: #8ab4f8;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #8ab4f8;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.input::placeholder {
+  color: #8888cc;
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Кнопки */
+.submitButton {
+  width: 100%;
+  background: linear-gradient(135deg, #8ab4f8 0%, #6b93d6 100%);
+  color: white;
+  border: none;
+  padding: 1.3rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(138, 180, 248, 0.4);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.buttonIcon {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Разделитель */
+.divider {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.divider span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0 1.5rem;
+  color: #b0b0ff;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Кнопка Google */
+.googleButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: white;
+  color: #333;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.googleButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.googleButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.googleIcon {
+  font-size: 1.3rem;
+}
+
+/* Футер */
+.authFooter {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.authFooter p {
+  color: #b0b0ff;
+  font-size: 1rem;
+}
+
+.authLink {
+  color: #8ab4f8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.authLink:hover {
+  text-decoration: underline;
+}
+
+/* Сообщения об ошибках */
+.errorMessage {
+  background: rgba(220, 53, 69, 0.2);
+  color: #ff6b6b;
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .signupPage {
+    padding: 1rem;
+  }
+  
+  .signupCard {
+    padding: 2.5rem 2rem;
+  }
+  
+  .signupHeader .title {
+    font-size: 2rem;
+  }
+  
+  .signupHeader .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signupCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .signupHeader .title {
+    font-size: 1.8rem;
+  }
+  
+  .input {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .submitButton, .googleButton {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
